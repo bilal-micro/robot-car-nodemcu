@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from .views import update_x_Y
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('update/<str:data>' , update_x_Y)
 ]
