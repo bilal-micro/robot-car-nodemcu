@@ -32,7 +32,6 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     'daphne',
-    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,6 +70,11 @@ TEMPLATES = [
 
 ASGI_APPLICATION = 'core.asgi.application'
 
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "channels.layers.InMemoryChannelLayer",
+    },
+}
 
 
 AUTH_PASSWORD_VALIDATORS = [
