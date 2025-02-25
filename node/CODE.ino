@@ -93,7 +93,7 @@ void loop() {
   checkConnection();
   sendTestMessage();
   while(client.available()){
-    delay(500);
+    // delay(500); This is main prbolem 
     client.onMessage(onMessageCallback);
     client.poll();
     motor();
